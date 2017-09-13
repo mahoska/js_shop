@@ -1,0 +1,33 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+
+body{
+	font: normal 14px/20px Arial, Helvetica, sans-serif;
+}
+
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.centr{
+text-align:center;
+}
+
+.filter-form{
+margin-bottom:20px;
+}
+
+.product_tabl_el{
+min-height: 380px;
+max-height: 380px;
+}
+
+.product_tabl_el img{
+height: 250px;
+}
