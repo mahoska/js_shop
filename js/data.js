@@ -57,7 +57,7 @@ var all_products = [
 },
 {
 	id : 6,
-	img : ["img/legence/led-penta-1.jpg", "img/legence/led-penta-2.jpg", "img/legence/led-penta-3.jpg"], 
+	img : ["img/legence/led-penta-1.jpg", "img/legence/legs-penta-2.jpg", "img/legence/legs-penta-3.jpg"], 
 	name : "легинсы \"Пентаграмма УРОБОРОС\" ", 
 	price : [12.0, 14.0],
 	category : "leggines",
@@ -77,7 +77,7 @@ var all_products = [
 },
 {
 	id : 8,
-	img : ["img/legence/leg-bones-bio-White-1.jpg", "img/legence/Muerte-2leg-bones-bio-White-2.jpg", "img/legence/leg-bones-bio-White-3.jpg"], 
+	img : ["img/legence/leg-bones-bio-White-1.jpg", "img/legence/leg-bones-bio-White-2.jpg", "img/legence/leg-bones-bio-White-3.jpg"], 
 	name : "легинсы \"Кости биомеханика на белом фонеЕ\"", 
 	price : [20.0, 22.0],
 	category : "leggines",

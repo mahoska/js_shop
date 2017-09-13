@@ -147,20 +147,9 @@ document.querySelector("#cear_filter").addEventListener('click',function(){
 	location.reload();
 });
 
-
-//////////////////////////////////////////////////////////////////////
-/*color_select.addEventListener('change',changeSelect("color"));
-function changeSelect(property){
-var filter_type = this.value;
-	if(filter_type=="null"){
-		drawProductTable(createProductsArr(all_products));
-		return;
-	}
-	var filter_arr = product_arr.filter(function(product) {
-			return (property === "color" && product.color == filter_type) ;
-	});	
-	localStorage['products'] = JSON.stringify(filter_arr);
-	localStorage['color_sel'] = filter_type;
-	drawProductTable(filter_arr);
-	location.reload();
-}*/
+document.querySelectorAll(".product_tabl_el").forEach(function(el){
+	el.addEventListener('click',function(){
+		localStorage['prod_id'] = this.dataset.id;
+		document.location.href = "product.html";
+	})
+});

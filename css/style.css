@@ -31,3 +31,67 @@ max-height: 380px;
 .product_tabl_el img{
 height: 250px;
 }
+/**********gallery*************/
+.gallery{
+height:650px;
+width:450px;
+}
+
+#main_img{
+margin-top:30px;
+}
+
+#main_img img{
+max-height:300px;
+text-align:center;
+}
+
+.miniature {
+float:left;
+margin-right:20px;
+margin-bottom:5px;
+}
+
+.miniature img{
+	height:100px;
+}
+
+.none{
+	display:none;
+}
+
+.block{
+	display:block;
+}
+
+.active{
+  display:block;
+}
+
+#left_cur, #right_cur
+{
+	color:red;
+	cursor:pointer;
+}
+
+#left_cur{
+	position:relative;
+	top: -170px;
+	left: -190px;
+}
+
+#right_cur{
+	position:relative;
+	top: -190px;
+	left: 150px;
+}
+
+.mini{
+	width:400px;
+	margin:0 auto;
+}
+
+#cursors{
+height:30px;
+}
+

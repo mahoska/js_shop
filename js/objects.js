@@ -12,10 +12,9 @@ var Product = function(_id, _img, _name, _price, _category, _size, _color, _desc
 	{
 		var container = document.createElement("div");
 		container.setAttribute('class','col-sm-4 col-md-3 ');
-		var a = document.createElement("a");
-		a.setAttribute('href', "product.html?id="+this.id)
 		var thumb = document.createElement("div");
-		thumb.setAttribute('class','thumbnail product_tabl_el');		
+		thumb.setAttribute('class','thumbnail product_tabl_el');
+		thumb.setAttribute('data-id',this.id);		
 		var _img = document.createElement("img");
 		_img.setAttribute('src',this.img[0]);
 		var captn = document.createElement("div");	 
@@ -24,13 +23,11 @@ var Product = function(_id, _img, _name, _price, _category, _size, _color, _desc
 		h.innerHTML = this.name ;
 		var p = document.createElement("p");
 		p.innerHTML = "<strong>"+ this.price[0] + " EUR</strong>";
-		
 		thumb.appendChild(_img);	
 		captn.appendChild(h);	
 		captn.appendChild(p);			
 		thumb.appendChild(captn);
-		a.appendChild(thumb);	
-		container.appendChild(a);
+		container.appendChild(thumb);
 		return container;	
 	}
 }
