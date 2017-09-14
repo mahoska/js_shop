@@ -110,7 +110,7 @@ var all_products = [
 	img : ["img/belts/1-1.jpg","img/belts/1-2.jpg","img/belts/1-3.jpg"], 
 	name : "Ремень 2 ряда пирамида (кожа)", 
 	price : [50.5], 
-	category : "belt",
+	category : "belts",
 	size : ["M"], 
 	color : "black", 
 	description : "Ремень-пирамида   for man"
@@ -120,7 +120,7 @@ var all_products = [
 	img : ["img/belts/oduct-pictures-0821-rem2-1.jpg","img/belts/oduct-pictures-0821-rem2-2.jpg","img/belts/oduct-pictures-0821-rem2-3.jpg"], 
 	name : "Ремень 3 ряда пирамида (кожа)", 
 	price : [70.5], 
-	category : "belt",
+	category : "belts",
 	size : ["XL"], 
 	color : "black", 
 	description : "Ремень-пирамида   for man"
@@ -130,7 +130,7 @@ var all_products = [
 	img : ["img/belts/oduct-pictures-0821-rem1-1.jpg","img/belts/oduct-pictures-0821-rem1-2.jpg","img/belts/oduct-pictures-0821-rem1-3.jpg"], 
 	name : "Ремень 4 ряда пирамида (кожа)", 
 	price : [85.25, 90.25], 
-	category : "belt",
+	category : "belts",
 	size : ["S","XXL"], 
 	color : "black", 
 	description : "Ремень-пирамида   for man"

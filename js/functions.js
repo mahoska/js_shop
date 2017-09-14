@@ -2,7 +2,15 @@ function createProductsArr(products){
 	var prod = {};
 	var product_arr = [];
 	products.forEach(function(product, key){
-		prod = new Product(product.id, product.img, product.name, product.price, product.category, product.size, product.color, product.description);
+		prod = new Product(
+							product.id,
+							product.img,
+							product.name,
+							product.price,
+							product.category,
+							product.size,
+							product.color,
+							product.description);
 		product_arr.push(prod);
 	});
 	return product_arr;
@@ -27,20 +35,83 @@ function BuildSelect(/*array*/inputsArr, /*array*/inputsVal, /*HTMLElement*/html
 }
 
 
-function drawProductTable(product_arr){
-product_table.innerHTML = "";
-var i=0;
-	product_arr.forEach(function(product, key){
-		if (i==4) i=0;
-		if(i==0){
-			row = document.createElement("div");
-			row.setAttribute('class','row');
-			product_table.appendChild(row);
-		}
-		var _div = product.draw();
-			row.appendChild(_div);
-		i++;
-	});
+/*filters*/
+function glodalfilter(color, size, category, sort){
+	var product_arr = createProductsArr(all_products);	
+	var filter_arr;
+	if(color && color!=null){
+
+		filter_arr = product_arr.filter(function(product) {
+			return product.color == color;
+		});	
+		product_arr = filter_arr;
+	}
+	else{
+		window.localStorage.removeItem("color_sel");
+	}
+	console.log(filter_arr)
+	if(size && size!=null){
+		filter_arr = product_arr.filter(function(product) {
+		var kol = 0;
+		var self = product;
+				var pr = product.size.filter(function(sz){
+					kol++;
+					return sz == size;
+				});
+				if(pr.length!=0){
+					product.price = [self.price[kol-1]];
+					product.size = [self.size[kol-1]];
+					return product;
+				}
+		});	
+		product_arr = filter_arr;
+	}
+	else{
+		window.localStorage.removeItem("size_sel");
+	}
+	console.log(filter_arr)		
+	if(category && category!=null){
+		var filter_arr = product_arr.filter(function(product) {
+				return product.category == category;
+		});	
+		product_arr = filter_arr;
+	}
+	else{
+		window.localStorage.removeItem("categ_sel");
+	}
+	console.log(filter_arr)		
+	if(sort && sort!=null){
+		if(sort == "low")
+			sortProductUp(product_arr);
+		if(sort == "hight")
+			sortProductDown(product_arr);
+	}
+	console.log(product_arr)
+	return product_arr;
+}
+
+function sortProductUp(product_arr){
+	product_arr.sort(function(a,b){
+			if (a.price[0] < b.price[0] ) {
+			return -1;
+		  }
+		  if (a.price[0] > b.price[0] ) {
+			return 1;
+		  }
+		  return 0;
+	})
+}
+
+function sortProductDown(product_arr){
+	product_arr.sort(function(a,b){
+			if (a.price[0] > b.price[0] ) {
+			return -1;
+		  }
+		  if (a.price[0] < b.price[0] ) {
+			return 1;
+		  }
+		  return 0;
+	})
 }
 
 
